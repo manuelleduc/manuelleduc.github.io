@@ -21,9 +21,9 @@ nginx:
   image: nginx
 {% endhighlight %}
 
-1. Installing [docker](https://docs.docker.com/engine/installation/) and [docker compose](https://docs.docker.com/compose/install/).
-2. Move next to **docker-compose.yml**
-3. Starting the containers
+ * Installing [docker](https://docs.docker.com/engine/installation/) and [docker compose](https://docs.docker.com/compose/install/).
+ * Move next to **docker-compose.yml**
+ * Starting the containers
 
 {% highlight bash %}
 $ docker-compose up -d
@@ -31,7 +31,7 @@ Creating protohaproxy_nginx_1
 Creating protohaproxy_loadbalancer_1
 {% endhighlight %}
 
-4. Checking docker status
+ * Checking docker status
 
 {% highlight bash %}
 $ docker ps
@@ -44,9 +44,9 @@ At this point you can access http://localhost:8045/ and see the following result
 
 > ![](/images/2015-11-04-docker-compose-haproxy-1.png)
 
-5. Consulting `docker-machine logs` while reloading http://localhost:8045/ will reveal that every request go through *protohaproxy_loadbalancer_1* and then handled by *protohaproxy_nginx_1*
+ * Consulting `docker-machine logs` while reloading http://localhost:8045/ will reveal that every request go through *protohaproxy_loadbalancer_1* and then handled by *protohaproxy_nginx_1*
 
-6. We can now scale the number of nginx instances behind the loadbalancer by using the scale command.
+ * We can now scale the number of nginx instances behind the loadbalancer by using the scale command.
 
 {% highlight bash %}
 docker-compose scale nginx=3

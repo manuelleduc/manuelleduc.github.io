@@ -8,4 +8,4 @@ layout: home
 This is the root of my github page, it only references other webpages related to my professional activities.
 
 - **Personal Page:** [https://mleduc.xyz](https://mleduc.xyz);
-- **Alex Language:** [official documentation](/alex).
+- **Alex Language:** [official documentation](https://diverse-project.github.io/alex/).
